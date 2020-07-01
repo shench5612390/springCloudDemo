@@ -1,12 +1,12 @@
 server:
-  port: 5062
+  port: 5080
 spring:
   application:
     name: consumer-server
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:5060/eureka
+      defaultZone: http://eureka1:5060/eureka/,http://eurekar2:5061/eureka/
 feign:
   hystrix:
     enabled: true
@@ -18,7 +18,7 @@ hystrix:
         isolation:
           strategy: SEMAPHORE
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 1000
 
 
 

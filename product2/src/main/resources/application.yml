@@ -2,8 +2,9 @@ spring:
   application:
     name: product-server
 server:
-  port: 5070
+  port: 5071
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:5060/eureka/,http://eureka2:5061/eureka/
+
